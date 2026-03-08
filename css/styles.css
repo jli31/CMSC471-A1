@@ -1,0 +1,44 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.dashboard {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.controls {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.map-container {
+    flex: 3;
+    background: white;
+    min-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    /* Crucial for zoom/pan so it doesn't spill out */
+    overflow: hidden; 
+}
+
+.chart-container {
+    flex: 2;
+    background: white;
+    min-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.writeup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}

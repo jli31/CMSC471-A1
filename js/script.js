@@ -1,11 +1,45 @@
-const margin = { top: 80, right: 60, bottom: 60, left: 100 };
-const width = 800 - margin.left - margin.right;
-const height = 600 - margin.top - margin.bottom;
+// Set up dimensions for the map
+const mapWidth = 800;
+const mapHeight = 500;
 
-// Create SVG
-const svg = d3.select('#vis')
-    .append('svg')
-    .attr('width', width + margin.left + margin.right)
-    .attr('height', height + margin.top + margin.bottom)
-    .append('g')
-    .attr('transform', `translate(${margin.left},${margin.top})`);
+// Set up dimensions for the secondary chart
+const chartWidth = 500;
+const chartHeight = 500;
+
+// Create the Map SVG
+const mapSvg = d3.select("#map-view")
+    .append("svg")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("viewBox", `0 0 ${mapWidth} ${mapHeight}`);
+
+// Create a group (<g>) for the map items. 
+// Applying zoom/pan to a <g> tag is much easier than the whole SVG.
+const mapGroup = mapSvg.append("g");
+
+// Create the Chart SVG
+const chartSvg = d3.select("#chart-view")
+    .append("svg")
+    .attr("width", "100%")
+    .attr("height", "100%")
+    .attr("viewBox", `0 0 ${chartWidth} ${chartHeight}`);
+
+// Load the data
+// Note: You will need the TopoJSON/GeoJSON for the US map, AND your weather CSV
+Promise.all([
+    // d3.json("data/us-states.json"), // You'll need to grab a map file
+    d3.csv("data/weather_2017.csv")  // Your provided dataset
+]).then(function(data) {
+    // const mapData = data[0];
+    const weatherData = data[1];
+
+    console.log("Data loaded successfully!", weatherData);
+
+    // TODO: Draw Map
+    // TODO: Draw secondary chart
+    // TODO: Setup Zoom on mapGroup
+    // TODO: Setup Brush on chartSvg
+    
+}).catch(function(error){
+    console.error("Error loading data: ", error);
+});

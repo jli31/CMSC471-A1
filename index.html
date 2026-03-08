@@ -7,11 +7,29 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div id="tooltip" style="display:none"></div> 
-    <div class="container"> <!-- Centers content and sets max width -->
+    <header>
         <h1>A1: Interactive Visualization 2017 US Weather with D3.js by Jiho Lee and John Li</h1>
-        <div id="vis"></div> <!--  Will hold our visualization (SVG) -->
+        <p>Explore average temperatures, precipitation, and elevation across US cities and airports.</p>
+    </header>
+
+    <div class="dashboard">
+        <aside class="controls">
+            <h3>Display Variable</h3>
+            <label><input type="radio" name="metric" value="temp" checked> Average Temp</label><br>
+            <label><input type="radio" name="metric" value="precipitation"> Total Precipitation</label><br>
+            <label><input type="radio" name="metric" value="elevation"> Elevation</label><br>
+        </aside>
+
+        <main class="map-container" id="map-view">
+            </main>
+
+        <section class="chart-container" id="chart-view">
+            </section>
     </div>
+
+    <section class="writeup">
+        <h2>Project Write-up</h2>
+        </section>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="js/script.js"></script>
