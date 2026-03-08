@@ -42,3 +42,15 @@ body {
     padding: 20px;
     border-radius: 8px;
 }
+
+.tooltip {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    padding: 15px;       /* Increased from 10px */
+    border-radius: 6px;  /* Slightly softer edges */
+    pointer-events: none; 
+    font-size: 16px;     /* Increased from 14px */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* Slightly larger shadow */
+    opacity: 0; 
+}
