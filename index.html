@@ -29,6 +29,23 @@
 
     <section class="writeup">
         <h2>Project Write-up</h2>
+        <h3>Data:</h3>
+        <p>We chose to explore the Daily Weather in the U.S. dataset. The dataset is a csv file containing
+            records of daily weather information from stations accross the U.S. such as precipitation, snowfall, min and max temp, etc. We transformed the data to
+            get only the 50 U.S. states and D.C. In this visualization, we focus on representing
+            average temp, total precipitation, and elevation ontop of a map of the United States. 
+        </p>
+        <h3>Rationale</h3><p>
+            The dataset includes daily weather readings from specific stations. These stations have a location represented by latitude and longitude, so we thought
+            it would be interesting to explore and visualize how these readings show geographically on a map of the United States. In order to compare how different weather patterns look on the same map,
+            we use a "display" selector to choose what variable is represented on the geographic map (ex. is there association between elevation and avg temp or elevation and total precip). To be able to view patterns both country wide and more specific (states) we include a zoom feature.
+            We didn't necessarily consider other alternatives (other than adding zoom features) as this seemed the best option to explore the relationships we wanted to explore.
+        </p>
+        <h3>Development Overview</h3>
+        <p>We discussed which dataset and how we wanted to explore it together. The vision for how we wanted the visualization to look like overall was made together. Most of the devops setup and visualization setup was done by John. Then after we discussed the implementation and changes we wanted to make (such as adding the zoom feature) Jiho wrote most of the writeup and demo video.
+            Overall, our application took around 5 people-hours. We took the most time brainstorming what we actually wanted to visualize and how to make our vision happen in code. Finding out how to actually implement our ideas in D3.js was easier as we utilized the help of AI assistance to figure out the best way to
+            implement the visualization aspects we wanted to implement. A challenge of the project was figuring out how we would collaborate on one codebase, which we resolved by using a github repository for version control.
+        </p>
         </section>
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
